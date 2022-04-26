@@ -1,9 +1,9 @@
 const sizePicker = document.getElementById("sizePicker");
-// Select size input
+// Select input size
 let inputHeight = document.getElementById("inputHeight");
 let inputWidth = document.getElementById("inputWidth");
 
-// Select color input
+// color picker
 let color = document.getElementById("colorPicker");
 
 const pixelCanvas = document.getElementById("pixelCanvas");
@@ -18,7 +18,7 @@ function clearGrid() {
 function makeGrid(e) {
   e.preventDefault();
 
-  // Clear the grid everytime
+  // Reset the grid 
   clearGrid();
 
   const height = inputHeight.value;
@@ -34,12 +34,12 @@ function makeGrid(e) {
       // append it to row element
       row.appendChild(column);
     }
-    // append row element to table(i.e pixelCanvas) element
+   // append row element to table
     pixelCanvas.appendChild(row);
   }
 }
 
-// When size is submitted by the user, call makeGrid()
+//  call makeGrid()
 sizePicker.addEventListener("submit", makeGrid);
 
 pixelCanvas.addEventListener("click", function (e) {
