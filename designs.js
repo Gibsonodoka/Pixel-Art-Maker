@@ -15,33 +15,42 @@ function clearGrid() {
   });
 }
 
-function makeGrid(e) {
-  e.preventDefault();
+function makeGrid(pam) {
+  // Your code goes here!
+  pam.preventDefault();
 
-  // Reset the grid 
+  // ResetUSER  grid 
   clearGrid();
 
+  
   const height = inputHeight.value;
+  
   const width = inputWidth.value;
-  // nested loop
+
   for (let i = 1; i <= height; i++) {
-    //row element is created
+  
     const row = document.createElement("tr");
+    
     for (let j = 1; j <= width; j++) {
-      // create column element
+     
       const column = document.createElement("td");
+      
       column.id = "column-i-j";
-      // append it to row element
+   
       row.appendChild(column);
     }
-   // append row element to table
+    
+   
+    
     pixelCanvas.appendChild(row);
   }
 }
 
-//  call makeGrid()
+//  call makeGrid() function
+
 sizePicker.addEventListener("submit", makeGrid);
 
-pixelCanvas.addEventListener("click", function (e) {
-  e.target.style.backgroundColor = color.value;
+
+pixelCanvas.addEventListener("click", function (pam) {
+  pam.target.style.backgroundColor = color.value;
 });
