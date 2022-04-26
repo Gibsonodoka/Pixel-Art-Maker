@@ -8,11 +8,12 @@ let color = document.getElementById("colorPicker");
 
 const pixelCanvas = document.getElementById("pixelCanvas");
 
-function clearGrid() {
-  const allRows = document.querySelectorAll("tr");
-  allRows.forEach((row) => {
-    row.remove();
-  });
+function clearGrid() 
+{
+     const allRows = document.querySelectorAll("tr");
+     allRows.forEach((row) => {
+     row.remove();
+     });
 }
 
 function makeGrid(pam) {
